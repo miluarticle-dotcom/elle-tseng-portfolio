@@ -639,9 +639,63 @@
     }
 
     /* ─────────────────────────────────────────
+       FULL-CASE SHOWCASE
+    ───────────────────────────────────────── */
+    #fullcase { background: var(--dark); }
+    .fullcase-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .fullcase-item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .fullcase-label {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .fullcase-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-line);
+      border-radius: 20px;
+      padding: 4px 14px;
+    }
+    .fullcase-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+    .fullcase-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .fullcase-img-wrap {
+      border: 1px solid var(--gold-line);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: zoom-in;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .fullcase-img-wrap:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+    .fullcase-img-wrap img {
+      width: 100%;
+      display: block;
+    }
+
+    /* ─────────────────────────────────────────
        EXPERIENCE
     ───────────────────────────────────────── */
-    #experience { background: var(--dark); }
+    #experience { background: var(--dark-2); }
     .exp-list {
       display: flex; flex-direction: column;
       gap: 0;
@@ -723,7 +777,7 @@
       line-height: 1.5;
       flex-shrink: 0;
     }
-    .exp-bullets strong { color: var(--gold-light); font-weight: 600; }
+    .exp-bullets strong { color: var(--gold-light); font-weight: 600; font-family: inherit; display: inline; }
 
     /* ─────────────────────────────────────────
        EDUCATION
@@ -951,8 +1005,9 @@
   <a href="#" class="nav-logo">Elle Tseng</a>
   <ul class="nav-links">
     <li><a href="#about">关于我</a></li>
-    <li><a href="#portfolio">作品集</a></li>
     <li><a href="#experience">经历</a></li>
+    <li><a href="#portfolio">作品集</a></li>
+    <li><a href="#fullcase">全案呈现</a></li>
     <li><a href="#education">教育</a></li>
     <li><a href="#contact">联系</a></li>
   </ul>
@@ -1063,6 +1118,138 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="section-inner">
+    <span class="sec-label reveal">Experience · 工作经历</span>
+    <h2 class="sec-title reveal d1">职业轨迹</h2>
+    <div class="gold-rule reveal d2"></div>
+
+    <div class="exp-list">
+
+      <!-- 1 -->
+      <div class="exp-item reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">
+              数皆智能（益普索集团）<span class="sep">·</span>
+              <span class="exp-role">Social Planning Supervisor</span>
+            </div>
+          </div>
+          <div class="exp-date">2025.11 — 至今</div>
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">团队协调</span>
+          <span class="exp-tag">项目管理</span>
+          <span class="exp-tag">突发事件处理</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>独立主导纵横汽车品牌Social业务，统筹1名正职成员+3支剪辑团队，负责从对客沟通、方案策划、创意输出到拍摄执行的全链路交付</li>
+          <li>线下面对面完成 <strong>30+</strong> 位车主的面对面访谈，输出 <strong>5万字</strong> 深度采访材料与VOC数据洞察</li>
+          <li>从0搭建品牌官方账号，上线3个月单平台曝光 <strong>500w+</strong>，自然增粉 <strong>2.5k+</strong>，发布50条视频，4支线下实拍精品向车主故事，均获客户好评</li>
+          <li>使用Claude开发官号多平台数据复盘月报自动生成工具，提升团队数据分析效率</li>
+        </ul>
+      </div>
+
+      <!-- 2 -->
+      <div class="exp-item reveal d1">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">
+              海唐公关<span class="sep">·</span>
+              <span class="exp-role">Social Manager</span>
+            </div>
+          </div>
+          <div class="exp-date">2025.09 — 2025.10</div>
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">独立呈案能力</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>独立主导极氪GT改色上市社媒传播案、吉利星舰7上市整合全案（含试驾），均获客户好评</li>
+          <li>共计独立交付 <strong>13份方案</strong>（含3份比稿方案 + 10份执行方案，改稿方案数量未计算），多项目并进</li>
+          <li>深度服务吉利系+极氪品牌矩阵（极氪、吉利星舰/星耀/星愿、领克等多品牌），积累新能源汽车上市传播与试驾活动策划全链路经验</li>
+        </ul>
+      </div>
+
+      <!-- 3 -->
+      <div class="exp-item reveal d2">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">
+              IPG集团 Mediabrands 盟博广告<span class="sep">·</span>
+              <span class="exp-role">Social Planner</span>
+            </div>
+          </div>
+          <div class="exp-date">2024.05 — 2025.06</div>
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">呈案能力</span>
+          <span class="exp-tag">数据分析与策略思维</span>
+          <span class="exp-tag">比稿能力</span>
+          <span class="exp-tag">方案审查</span>
+          <span class="exp-tag">英文能力</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Leading赢标日产、Nike、乐理比稿项目；核心参与并赢标Lacoste</li>
+          <li>参与大众安徽新车上市项目执行，社媒曝光 <strong>2.4亿</strong>，互动量 <strong>600万+</strong></li>
+          <li>参与Lacoste「惊城大鳄」执行标，全平台曝光 <strong>2,700万</strong>，小红书爆文率 <strong>27%</strong></li>
+          <li>快速掌握5+平台第三方监测工具及多圈层人群分析工具，考取小红书种草师认证</li>
+        </ul>
+      </div>
+
+      <!-- 4 -->
+      <div class="exp-item reveal d3">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">
+              朗知公关<span class="sep">·</span>
+              <span class="exp-role">创意策划</span>
+            </div>
+          </div>
+          <div class="exp-date">2023.05 — 2024.05</div>
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">热点文案</span>
+          <span class="exp-tag">长短视频脚本</span>
+          <span class="exp-tag">直播脚本</span>
+          <span class="exp-tag">分镜脚本</span>
+          <span class="exp-tag">Social互动脚本</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>主导沃尔沃品牌官号内容策划，产出抖音点赞破 <strong>15万</strong>、B站播放破 <strong>80万</strong> 爆款内容</li>
+          <li>负责路特斯/方太品牌视频账号日常创意策划，QC剪辑并线下跟片</li>
+          <li>为AIGC项目撰写技术解析类视频长文脚本</li>
+        </ul>
+      </div>
+
+      <!-- 5 -->
+      <div class="exp-item reveal d4">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">
+              盖世汽车<span class="sep">·</span>
+              <span class="exp-role">策划记者</span>
+            </div>
+          </div>
+          <div class="exp-date">2022.06 — 2023.04</div>
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">选题策划</span>
+          <span class="exp-tag">行业洞察</span>
+          <span class="exp-tag">行业访谈</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>深耕汽车行业一线报道，选题稿件多篇阅读破万</li>
+          <li>合作盖世汽车研究院，结合行业报告撰写8篇深度报道</li>
+          <li>多维度策划新闻内容：泛对谈节目、口播短视频、深度长文、微信推文排版</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1225,132 +1412,49 @@
   <div class="gallery-counter" id="galleryCounter"></div>
 </div>
 
-<!-- ── EXPERIENCE ── -->
-<section id="experience">
+<!-- ── FULL-CASE SHOWCASE ── -->
+<section id="fullcase">
   <div class="section-inner">
-    <span class="sec-label reveal">Experience · 工作经历</span>
-    <h2 class="sec-title reveal d1">职业轨迹</h2>
+    <span class="sec-label reveal">Full-Case · 全案能力</span>
+    <h2 class="sec-title reveal d1">全案呈现</h2>
     <div class="gold-rule reveal d2"></div>
 
-    <div class="exp-list">
+    <div class="fullcase-grid">
 
-      <!-- 1 -->
-      <div class="exp-item reveal">
-        <div class="exp-header">
-          <div>
-            <div class="exp-company">
-              数皆智能（益普索集团）<span class="sep">·</span>
-              <span class="exp-role">Social Planning Supervisor</span>
-            </div>
-          </div>
-          <div class="exp-date">2025.11 — 至今</div>
+      <!-- 抖音IMC案 -->
+      <div class="fullcase-item reveal d1">
+        <div class="fullcase-label">
+          <span class="fullcase-tag">抖音 IMC 案</span>
+          <span class="fullcase-note">以下方案均由本人独立完成</span>
         </div>
-        <div class="exp-tags">
-          <span class="exp-tag">团队协调</span>
-          <span class="exp-tag">项目管理</span>
-          <span class="exp-tag">突发事件处理</span>
+        <div class="fullcase-title">我的全案能力呈现 · 抖音 IMC 案</div>
+        <div class="fullcase-img-wrap" onclick="openSingleImg('case-1.png')">
+          <img src="case-1.png" alt="抖音IMC案全案能力呈现"/>
         </div>
-        <ul class="exp-bullets">
-          <li>独立主导纵横汽车品牌Social业务，统筹1名正职成员+3支剪辑团队，负责从对客沟通、方案策划、创意输出到拍摄执行的全链路交付</li>
-          <li>线下面对面完成 <strong>30+</strong> 位车主的面对面访谈，输出 <strong>5万字</strong> 深度采访材料与VOC数据洞察</li>
-          <li>从0搭建品牌官方账号，上线3个月单平台曝光 <strong>500w+</strong>，自然增粉 <strong>2.5k+</strong>，发布50条视频，4支线下实拍精品向车主故事，均获客户好评</li>
-          <li>使用Claude开发官号多平台数据复盘月报自动生成工具，提升团队数据分析效率</li>
-        </ul>
       </div>
 
-      <!-- 2 -->
-      <div class="exp-item reveal d1">
-        <div class="exp-header">
-          <div>
-            <div class="exp-company">
-              海唐公关<span class="sep">·</span>
-              <span class="exp-role">Social Manager</span>
-            </div>
-          </div>
-          <div class="exp-date">2025.09 — 2025.10</div>
+      <!-- 上市整合案 -->
+      <div class="fullcase-item reveal d2">
+        <div class="fullcase-label">
+          <span class="fullcase-tag">上市整合案</span>
+          <span class="fullcase-note">以下方案均由本人独立完成</span>
         </div>
-        <div class="exp-tags">
-          <span class="exp-tag">独立呈案能力</span>
+        <div class="fullcase-title">我的全案能力呈现 · 上市整合案</div>
+        <div class="fullcase-img-wrap" onclick="openSingleImg('case-2.png')">
+          <img src="case-2.png" alt="上市整合案全案能力呈现"/>
         </div>
-        <ul class="exp-bullets">
-          <li>独立主导极氪GT改色上市社媒传播案、吉利星舰7上市整合全案（含试驾），均获客户好评</li>
-          <li>共计独立交付 <strong>13份方案</strong>（含3份比稿方案 + 10份执行方案，改稿方案数量未计算），多项目并进</li>
-          <li>深度服务吉利系+极氪品牌矩阵（极氪、吉利星舰/星耀/星愿、领克等多品牌），积累新能源汽车上市传播与试驾活动策划全链路经验</li>
-        </ul>
       </div>
 
-      <!-- 3 -->
-      <div class="exp-item reveal d2">
-        <div class="exp-header">
-          <div>
-            <div class="exp-company">
-              IPG集团 Mediabrands 盟博广告<span class="sep">·</span>
-              <span class="exp-role">Social Planner</span>
-            </div>
-          </div>
-          <div class="exp-date">2024.05 — 2025.06</div>
+      <!-- Social种草案 -->
+      <div class="fullcase-item reveal d3">
+        <div class="fullcase-label">
+          <span class="fullcase-tag">Social 种草案</span>
+          <span class="fullcase-note">以下方案 70% 由本人独立完成</span>
         </div>
-        <div class="exp-tags">
-          <span class="exp-tag">呈案能力</span>
-          <span class="exp-tag">数据分析与策略思维</span>
-          <span class="exp-tag">比稿能力</span>
-          <span class="exp-tag">方案审查</span>
-          <span class="exp-tag">英文能力</span>
+        <div class="fullcase-title">我的全案能力呈现 · Social 种草案</div>
+        <div class="fullcase-img-wrap" onclick="openSingleImg('case-3.png')">
+          <img src="case-3.png" alt="Social种草案全案能力呈现"/>
         </div>
-        <ul class="exp-bullets">
-          <li>Leading赢标日产、Nike、乐理比稿项目；核心参与并赢标Lacoste</li>
-          <li>参与大众安徽新车上市项目执行，社媒曝光 <strong>2.4亿</strong>，互动量 <strong>600万+</strong></li>
-          <li>参与Lacoste「惊城大鳄」执行标，全平台曝光 <strong>2,700万</strong>，小红书爆文率 <strong>27%</strong></li>
-          <li>快速掌握5+平台第三方监测工具及多圈层人群分析工具，考取小红书种草师认证</li>
-        </ul>
-      </div>
-
-      <!-- 4 -->
-      <div class="exp-item reveal d3">
-        <div class="exp-header">
-          <div>
-            <div class="exp-company">
-              朗知公关<span class="sep">·</span>
-              <span class="exp-role">创意策划</span>
-            </div>
-          </div>
-          <div class="exp-date">2023.05 — 2024.05</div>
-        </div>
-        <div class="exp-tags">
-          <span class="exp-tag">热点文案</span>
-          <span class="exp-tag">长短视频脚本</span>
-          <span class="exp-tag">直播脚本</span>
-          <span class="exp-tag">分镜脚本</span>
-          <span class="exp-tag">Social互动脚本</span>
-        </div>
-        <ul class="exp-bullets">
-          <li>主导沃尔沃品牌官号内容策划，产出抖音点赞破 <strong>15万</strong>、B站播放破 <strong>80万</strong> 爆款内容</li>
-          <li>负责路特斯/方太品牌视频账号日常创意策划，QC剪辑并线下跟片</li>
-          <li>为AIGC项目撰写技术解析类视频长文脚本</li>
-        </ul>
-      </div>
-
-      <!-- 5 -->
-      <div class="exp-item reveal d4">
-        <div class="exp-header">
-          <div>
-            <div class="exp-company">
-              盖世汽车<span class="sep">·</span>
-              <span class="exp-role">策划记者</span>
-            </div>
-          </div>
-          <div class="exp-date">2022.06 — 2023.04</div>
-        </div>
-        <div class="exp-tags">
-          <span class="exp-tag">选题策划</span>
-          <span class="exp-tag">行业洞察</span>
-          <span class="exp-tag">行业访谈</span>
-        </div>
-        <ul class="exp-bullets">
-          <li>深耕汽车行业一线报道，选题稿件多篇阅读破万</li>
-          <li>合作盖世汽车研究院，结合行业报告撰写8篇深度报道</li>
-          <li>多维度策划新闻内容：泛对谈节目、口播短视频、深度长文、微信推文排版</li>
-        </ul>
       </div>
 
     </div>
@@ -1474,6 +1578,14 @@
   const overlay  = document.getElementById('galleryOverlay');
   const gImg     = document.getElementById('galleryImg');
   const gCounter = document.getElementById('galleryCounter');
+
+  function openSingleImg(src) {
+    galleryImgs = [src];
+    galleryIdx = 0;
+    showGalleryImg();
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 
   function openGallery(card) {
     galleryImgs = JSON.parse(card.dataset.gallery || '[]');
